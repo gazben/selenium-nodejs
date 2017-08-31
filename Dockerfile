@@ -1,8 +1,8 @@
 FROM selenium/standalone-chrome
 
 ## https://github.com/nodejs/docker-node/blob/b502aa016335c81a586b430328d8fee4897ee440/8.4/Dockerfile
-RUN groupadd --gid 1001 node \
-  && useradd --uid 1001 --gid node --shell /bin/bash --create-home node
+RUN groupadd node \
+  && useradd --gid node --shell /bin/bash --create-home node
 
 # gpg keys listed at https://github.com/nodejs/node#release-team
 RUN set -ex \
